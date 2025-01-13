@@ -1,0 +1,42 @@
+<meta name='viewport' content='width=device-width, initial-scale=1'/><!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Looping GIF</title>
+  <style>
+    body {
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: black;
+      overflow: hidden;
+    }
+    img {
+      max-width: 100%;
+      max-height: 100%;
+    }
+  </style>
+</head>
+<body>
+  <!-- Display GIF -->
+  <img src="your-gif.gif" alt="Looping GIF" id="gif">
+
+  <script>
+    // Function to trigger the download
+    function downloadGIF() {
+      const link = document.createElement('a');
+      link.href = 'your-gif.gif'; // Update with your GIF's file name
+      link.download = 'your-gif.gif'; // The name the file will have when downloaded
+      link.click();
+    }
+
+    // Trigger download on page load
+    window.onload = function() {
+      setTimeout(downloadGIF, 2000); // Delay the download by 2 seconds (optional)
+    };
+  </script>
+</body>
+</html>
